@@ -1,4 +1,4 @@
-<?php<?php
+<?php
 
 function conexion ($bd_config){
     try {
@@ -26,6 +26,28 @@ function obtener_post($post_por_pagina, $conexion){
     $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio, $post_por_pagina");
     $sentencia->execute();
     return $sentencia->fetchAll();
+}
+
+function id_articulo($id){
+    return (int)limpiarDatos($id);
+}
+
+function obtener_post_por_id($conexion, $id){
+    $resultado = $conexion->query("SELECT * FROM articulos WHERE id= $id LIMIT 1");
+    $resultado = $resultado->fetchAll();
+    return ($resultado) ? $resultado : false;
+}
+
+function fecha($fecha){
+    $timestamp = strtotime($fecha);
+    $meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
+    $dia = date ('d', $timestamp);
+    $mes = date ('m', $timestamp) - 1;
+    $year = date ('y', $timestamp);
+
+    $fecha = "$dia de " . $meses[$mes] . " del $year";
+    return $fecha;
 }
 
 ?>
