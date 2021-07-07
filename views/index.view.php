@@ -1,33 +1,22 @@
 <?php require 'header.php'; ?>
 
     <div class="contenedor">
-        <div class="post">
+       <?php foreach($post as $post): ?>
+         <div class="post">
            <article>
-             <h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
-             <p class="fecha">1 de Enero de 2016</p>
+             <h2 class="titulo"><a href="single.php<?php echo $post['id'];?>"><?php echo $post['titulo'];?></a></h2>
+             <p class="fecha"><?php echo $post['fecha'];?></p>
              <div class="thumb">
-               <a href="#">
-                 <img src="<?php echo RUTA; ?>/imagenes/1.jpeg" alt="">
+               <a href="single.php<?php echo $post['id'];?>">
+                 <img src="<?php echo RUTA; ?>/imagenes/<?php echo $post['thumb'];?>" alt="">
                </a>
              </div>
-             <p class="extracto">Hablar de Home Office es hablar de trabajo en casa o Teletrabajo, pues como bien es sabido, estamos viviendo una época de muchos cambios y avances tecnológicos.</p>
-             <a href="#" class="continuar">Continuar Leyendo</a>
+             <p class="extracto"><?php echo $post['extracto'];?></p>
+             <a href="single.php<?php echo $post['id'];?>" class="continuar">Continuar Leyendo</a>
            </article>
-        </div>
+         </div>
+       <?php endforeach; ?>
 
-        <div class="post">
-           <article>
-            <h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
-             <p class="fecha">1 de Enero de 2016</p>
-             <div class="thumb">
-               <a href="#">
-                 <img src="<?php echo RUTA; ?>/imagenes/1.jpeg" alt="">
-               </a>
-             </div>
-             <p class="extracto">Hablar de Home Office es hablar de trabajo en casa o Teletrabajo, pues como bien es sabido, estamos viviendo una época de muchos cambios y avances tecnológicos.</p>
-             <a href="#" class="continuar">Continuar Leyendo</a>
-           </article>
-        </div>
 
         <?php require 'paginacion.php'; ?>
     </div>
