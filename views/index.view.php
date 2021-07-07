@@ -3,7 +3,7 @@
     <div class="contenedor">
         <div class="post">
            <article>
-             <h2 class="titulo">Titulo del articulo</h2>
+             <h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
              <p class="fecha">1 de Enero de 2016</p>
              <div class="thumb">
                <a href="#">
@@ -17,7 +17,7 @@
 
         <div class="post">
            <article>
-             <h2 class="titulo">Titulo del articulo</h2>
+            <h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
              <p class="fecha">1 de Enero de 2016</p>
              <div class="thumb">
                <a href="#">
