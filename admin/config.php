@@ -1,19 +1,21 @@
 <?php
 
-define('RUTA', 'http://localhost/blog/');
+define('RUTA' , 'http://localhost/blog/' );
 
-$bd_config = array(
-     'basedatos' => 'blog_practica',
-     'usuario' => 'root',
-     'pass' => ''
+$blog_config = array( 
+    'basedatos' => 'blog_practica',
+    'usuario' => 'root',
+    'pass' => ''
 );
-$blog_config = array(
+
+$blog_config = array( 
     'post_por_pagina' => '2',
-    'carpeta_imagenes' => 'imagenes/'
+    'carpeta_imagenes' => 'imagenes/',
 );
-$blog_admin = array(
-'usuario' => 'David',
-'password' => '123'
+
+$blog_admin = array( 
+    'usuario' => 'Alex',
+    'password' => '123'
 );
 
 ?>
