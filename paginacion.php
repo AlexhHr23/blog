@@ -14,10 +14,12 @@
                 <li><a href="index.php?p=<?php echo $i ?>"><?php echo $i ?></a></li>
             <?php endif; ?>
          <?php endfor; ?>
+
+         <?php if (pagina_actual() == $numero_paginas) : ?>
+            <li class="disabled">&raquo;</li>
+        <?php else: ?>
+            <li><a href="index.php?p=<?php echo pagina_actual() + 1 ?>">&raquo;</a></li>
+        <?php endif; ?>
         
-<!--      //<li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li class="disabled">&raquo;</li>
    </ul>
 </section>
