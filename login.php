@@ -1,4 +1,4 @@
-<?php session_start();
+<<?php session_start();
 require 'admin/config.php';
 require 'functions.php';
 

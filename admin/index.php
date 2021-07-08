@@ -1,13 +1,12 @@
 <?php session_start();
 
-//index admin
+//Archivo index
 require 'config.php';
-require '../functions.php';
+require '../funtions.php';
 
 $conexion = conexion($bd_config);
 
-comprobarSesion();
-
+comprobarSession();
 
 if (!$conexion) {
     header('Location: ../error.php');
