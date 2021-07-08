@@ -2,7 +2,7 @@
 require 'config.php';
 require '../functions.php';
 
-comprobarSession();
+comprobarSesion();
 
 $conexion = conexion($bd_config);
 
