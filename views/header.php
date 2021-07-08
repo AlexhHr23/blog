@@ -7,9 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo RUTA; ?>css/estilos.css">
+    <link rel="stylesheet" href="<?php echo RUTA; ?>/css/estilos.css">
     <title>Blog Alex</title>
 </head>
+
 <body>
     <header>
       <div class="contenedor">
