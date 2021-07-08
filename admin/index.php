@@ -6,7 +6,7 @@ require '../funtions.php';
 
 $conexion = conexion($bd_config);
 
-comprobarSession();
+comprobarSesion();
 
 if (!$conexion) {
     header('Location: ../error.php');
