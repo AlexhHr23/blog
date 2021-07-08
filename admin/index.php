@@ -2,7 +2,7 @@
 
 //Archivo index
 require 'config.php';
-require '../funtions.php';
+require '../functions.php';
 
 $conexion = conexion($bd_config);
 
